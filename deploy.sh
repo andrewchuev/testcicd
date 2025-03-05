@@ -4,7 +4,7 @@
 APP_NAME="testcicd.reslab.pro"  # Замените на имя вашего приложения
 APP_PATH="/var/www/$APP_NAME"
 RELEASES_PATH="$APP_PATH/releases"
-CURRENT_PATH="$APP_PATH/public_html"
+CURRENT_PATH="$APP_PATH/current"
 SHARED_PATH="$APP_PATH/shared"
 REPO_URL="git@github.com:andrewchuev/testcicd.git"  # Замените на ваш URL репозитория
 KEEP_RELEASES=5  # Сколько последних релизов хранить
@@ -63,7 +63,7 @@ php artisan view:cache
 ln -sfn "$RELEASE_PATH" "$CURRENT_PATH"
 
 # 8. Перезапуск PHP-FPM
-sudo systemctl restart php8.3-fpm
+# sudo systemctl restart php8.3-fpm
 
 # 9. Очистка старых релизов
 cd "$RELEASES_PATH"
