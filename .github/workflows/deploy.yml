@@ -20,5 +20,6 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /var/www/testcicd.reslab.pro
+            cd /var/www/testcicd.reslab.pro/public_html
+            chmod +x deploy.sh
             ./deploy.sh
