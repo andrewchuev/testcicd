@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return "Test 03";
+    return "Test 04";
 });
